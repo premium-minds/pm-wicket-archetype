@@ -1,0 +1,58 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>${applicationTitle}</display-name>
+
+	<listener>
+		<listener-class>${groupId}.webapp.utils.ContextLogbackListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>${groupId}.webapp.utils.ApplicationContextConfigurationListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>${groupId}.webapp.utils.mailer.ContextMailerListener</listener-class>
+	</listener>
+
+ 	<context-param>
+		<param-name>configuration</param-name>
+		<param-value>development</param-value>
+	</context-param>
+
+	<resource-ref>
+	    <description>Application Datasource</description>
+	    <res-ref-name>jdbc/appDatasource</res-ref-name>
+	    <res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>	    
+	</resource-ref>
+
+	<filter>
+		<filter-name>wicket-app</filter-name>
+		<filter-class>org.apache.wicket.protocol.http.WicketFilter</filter-class>
+		<init-param>
+			<param-name>applicationFactoryClassName</param-name>
+			<param-value>org.apache.wicket.guice.GuiceWebApplicationFactory</param-value>
+		</init-param>
+		<init-param>
+			<param-name>module</param-name>
+			<param-value>${package}.configuration.WebAppModule</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>wicket-app</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>ERROR</dispatcher>
+	</filter-mapping>
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/404</location>
+	</error-page>
+
+</web-app>

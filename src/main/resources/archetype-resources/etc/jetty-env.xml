@@ -1,0 +1,30 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<Configure id='wac' class="org.eclipse.jetty.webapp.WebAppContext">
+	<New id="myds" class="org.eclipse.jetty.plus.jndi.Resource">
+		<Arg></Arg>
+		<Arg>jdbc/appDatasource</Arg>
+		<Arg>
+			<New class="org.postgresql.ds.PGSimpleDataSource">
+				<Set name="User">postgres</Set>
+				<Set name="Password">postgres</Set>
+				<Set name="DatabaseName">${databaseName}</Set>
+				<Set name="ServerName">localhost</Set>
+				<Set name="PortNumber">5432</Set>
+			</New>
+		</Arg>
+	</New>
+	<Call name="setInitParameter">
+		<Arg>logger-config</Arg>
+		<Arg>filesystem:etc/logback.xml</Arg>
+	</Call>
+	<Call name="setInitParameter">
+		<Arg>app-config</Arg>
+		<Arg>filesystem:etc/application.properties</Arg>
+	</Call>
+	<Call name="setInitParameter">
+		<Arg>mailer-config</Arg>
+		<Arg>filesystem:etc/mailer.properties</Arg>
+	</Call>
+</Configure>

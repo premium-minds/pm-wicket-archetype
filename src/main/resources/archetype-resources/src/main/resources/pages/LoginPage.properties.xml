@@ -1,0 +1,17 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="welcome">Please login</entry>
+	<entry key="email.label">Email address</entry>
+	<entry key="password.label">Password</entry>
+
+	<entry key="form.email.Required">O Email é obrigatório.</entry>
+	<entry key="form.password.Required">A password é obrigatória.</entry>
+	<entry key="form.login.invalid">Email ou password inválida.</entry>
+
+	<entry key="login.action">Log in</entry>
+
+</properties>

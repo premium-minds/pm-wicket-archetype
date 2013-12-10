@@ -1,0 +1,30 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings 
+  xmlns="http://java.sun.com/xml/ns/persistence/orm"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_0.xsd"
+  version="2.0">
+	<package>${package}.entities</package>
+	
+	<entity class="UserApplication" access="FIELD">
+		<attributes>
+			<id name="id">
+				<generated-value generator="user_application_seq" />
+				<sequence-generator name="user_application_seq" sequence-name="user_application_seq" />
+			</id>
+		</attributes>
+	</entity>
+
+	<entity class="UserProfile" access="FIELD">
+		<attributes>
+			<id name="id">
+				<generated-value generator="user_profile_seq" />
+				<sequence-generator name="user_profile_seq" sequence-name="user_profile_seq" />
+			</id>
+		</attributes>
+	</entity>
+	
+</entity-mappings>
