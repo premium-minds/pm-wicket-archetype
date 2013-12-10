@@ -9,13 +9,13 @@
 	<display-name>${applicationTitle}</display-name>
 
 	<listener>
-		<listener-class>${groupId}.webapp.utils.ContextLogbackListener</listener-class>
+		<listener-class>com.premiumminds.webapp.utils.ContextLogbackListener</listener-class>
 	</listener>
 	<listener>
-		<listener-class>${groupId}.webapp.utils.ApplicationContextConfigurationListener</listener-class>
+		<listener-class>com.premiumminds.webapp.utils.ApplicationContextConfigurationListener</listener-class>
 	</listener>
 	<listener>
-		<listener-class>${groupId}.webapp.utils.mailer.ContextMailerListener</listener-class>
+		<listener-class>com.premiumminds.webapp.utils.mailer.ContextMailerListener</listener-class>
 	</listener>
 
  	<context-param>
