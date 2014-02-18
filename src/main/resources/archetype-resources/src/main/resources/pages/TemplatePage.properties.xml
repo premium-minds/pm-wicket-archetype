@@ -1,0 +1,14 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="sample">Página de exemplo</entry>
+	<entry key="submenu">Submenu</entry>
+	<entry key="submenu.option1">Opção 1</entry>
+	<entry key="submenu.option2">Opção 2</entry>
+	<entry key="submenu.header">Cabeçalho</entry>
+	<entry key="submenu.option3">Opção 3</entry>
+
+</properties>

@@ -11,10 +11,11 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="img/favicon.png">
 
-    <title>Static Top Navbar Example for Bootstrap</title>
+    <title>${applicationTitle}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -34,23 +35,19 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="${symbol_pound}">Project name</a>
+          <a class="navbar-brand" href="${symbol_pound}" wicket:id="home">${applicationTitle}</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li wicket:id="home"><a wicket:id="link" href="${symbol_pound}">Home</a></li>
-            <li wicket:id="crudifierSample"><a wicket:id="link" href="${symbol_pound}" >Crudifier Sample</a></li>
-            <li><a href="${symbol_pound}contact">Contact</a></li>
+            <li wicket:id="sample"><a wicket:id="link" href="${symbol_pound}"><wicket:message key="sample">Sample Link</wicket:message></a></li>
             <li class="dropdown" wicket:id="menu">
-              <a href="${symbol_pound}" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <a href="${symbol_pound}" class="dropdown-toggle" data-toggle="dropdown"><wicket:message key="submenu">Dropdown</wicket:message> <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li wicket:id="submenu"><a href="${symbol_pound}" wicket:id="link">Action</a></li>
-                <li><a href="${symbol_pound}">Another action</a></li>
-                <li><a href="${symbol_pound}">Something else here</a></li>
+                <li wicket:id="submenu1"><a href="${symbol_pound}" wicket:id="link"><wicket:message key="submenu.option1">Option 1</wicket:message></a></li>
+                <li wicket:id="submenu2"><a href="${symbol_pound}" wicket:id="link"><wicket:message key="submenu.option2">Option 2</wicket:message></a></li>
                 <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="${symbol_pound}">Separated link</a></li>
-                <li><a href="${symbol_pound}">One more separated link</a></li>
+                <li class="dropdown-header"><wicket:message key="submenu.header">Nav header</wicket:message></li>
+                <li wicket:id="submenu3"><a href="${symbol_pound}" wicket:id="link"><wicket:message key="submenu.option3">Option 3</wicket:message></a></li>
               </ul>
             </li>
           </ul>
@@ -72,8 +69,6 @@
     <div class="container">
 		<wicket:child />
     </div> <!-- /container -->
-
-    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
 	

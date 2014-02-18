@@ -21,9 +21,14 @@ public abstract class TemplatePage extends WebPage {
 	protected void onInitialize() {
 		super.onInitialize();
 		
-		add(new Menu("home", HomePage.class));
-		add(new Menu("crudifierSample", CrudifierSamplePage.class));
-		add(new Menu("menu").add(new Menu("submenu", CrudifierSamplePage.class)));
+		add(new BookmarkablePageLink<WebPage>("home", HomePage.class));
+		
+		add(new Menu("sample", SamplePage.class));
+		Menu menu = new Menu("menu");
+		menu.add(new Menu("submenu1", Option1Page.class));
+		menu.add(new Menu("submenu2", Option2Page.class));
+		menu.add(new Menu("submenu3", Option3Page.class));
+		add(menu);
 	}
 	
 	@Override
