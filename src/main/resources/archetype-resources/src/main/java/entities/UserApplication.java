@@ -10,7 +10,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-
+import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.NotEmpty;
 
 @SuppressWarnings("serial")
@@ -24,7 +24,7 @@ public class UserApplication implements Serializable {
 	private String name;
 	private String cipheredPassword;
 	
-	@NotEmpty
+	@NotNull
 	@ManyToOne(fetch=FetchType.EAGER, optional=false)
 	private UserProfile profile;
 	

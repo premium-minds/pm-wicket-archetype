@@ -5,7 +5,7 @@ package ${package}.entities;
 
 import java.io.Serializable;
 import java.util.Set;
-
+import javax.validation.constraints.NotNull;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -23,6 +23,7 @@ public class UserProfile implements Serializable {
 	@NotEmpty
 	private String description;
 	
+	@NotNull
 	@ElementCollection(fetch=FetchType.LAZY)
 	private Set<String> permissions;
 
