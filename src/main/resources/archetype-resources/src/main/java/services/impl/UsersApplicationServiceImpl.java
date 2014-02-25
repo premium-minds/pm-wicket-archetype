@@ -39,11 +39,27 @@ public class UsersApplicationServiceImpl extends AbstractServiceImpl implements 
 				.setParameter("email", email)
 				.getSingleResult();
 			fetch(user.getProfile().getPermissions()); // load permissions from database
-			if(BCrypt.checkpw(password, user.getCipheredPassword())) return detach(user);
+			if(BCrypt.checkpw(password, user.getCipheredPassword())){
+				user.setCipheredPassword("");
+				return detach(user);
+			}
 			throw new UserNotFoundException();
 		} catch(NoResultException e){
 			throw new UserNotFoundException();
 		}
+	}
+
+	@Override
+	public void changePassword(UserApplication user, String currentPassword, String newPassword) throws UserNotFoundException {
+		try {
+			UserApplication userDb = getEntityManager().find(UserApplication.class, user.getId());
+			if(!BCrypt.checkpw(currentPassword, userDb.getCipheredPassword())) throw new UserNotFoundException();
+			userDb.setCipheredPassword(generatePasswordHash(newPassword));
+			getEntityManager().flush();
+		} catch(NoResultException e){
+			throw new UserNotFoundException();
+		}
+		
 	}
 
 }

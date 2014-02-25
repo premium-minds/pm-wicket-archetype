@@ -7,4 +7,6 @@ import ${package}.entities.UserApplication;
 
 public interface UsersApplicationService {
 	public UserApplication verifyLogin(String email, String password) throws UserNotFoundException;
+	
+	public void changePassword(UserApplication user, String currentPassword, String newPassword) throws UserNotFoundException;
 }

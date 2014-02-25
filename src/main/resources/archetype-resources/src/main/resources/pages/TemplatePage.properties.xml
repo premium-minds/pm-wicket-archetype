@@ -11,4 +11,7 @@
 	<entry key="submenu.header">Cabeçalho</entry>
 	<entry key="submenu.option3">Opção 3</entry>
 
+	<entry key="user.change-password">Alterar password</entry>
+	<entry key="user.logout">Sair</entry>
+
 </properties>

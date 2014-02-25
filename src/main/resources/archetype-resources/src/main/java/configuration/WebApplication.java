@@ -79,5 +79,8 @@ public class WebApplication extends AuthenticatedWebApplication {
 			return loggedInUser!=null;
 		}
 
+		public UserApplication getLoggedInUser(){
+			return loggedInUser;
+		}
 	}
 }

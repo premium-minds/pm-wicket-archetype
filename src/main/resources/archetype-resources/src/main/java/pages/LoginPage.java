@@ -48,6 +48,15 @@ public class LoginPage extends WebPage {
 	}
 	
 	@Override
+	protected void onConfigure() {
+		super.onConfigure();
+		if(((WebApplication.AuthenticatedSession) getSession()).isSignedIn()){
+			continueToOriginalDestination();
+			throw new RestartResponseException(getApplication().getHomePage());
+		}
+	}
+
+	@Override
 	public void renderHead(IHeaderResponse response) {
 		super.renderHead(response);
 

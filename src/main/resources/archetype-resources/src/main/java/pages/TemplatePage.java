@@ -5,6 +5,7 @@ package ${package}.pages;
 
 import org.apache.wicket.Component;
 import org.apache.wicket.behavior.Behavior;
+import org.apache.wicket.devutils.debugbar.DebugBar;
 import org.apache.wicket.markup.ComponentTag;
 import org.apache.wicket.markup.head.IHeaderResponse;
 import org.apache.wicket.markup.head.JavaScriptHeaderItem;
@@ -13,7 +14,18 @@ import org.apache.wicket.markup.html.WebMarkupContainer;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.link.AbstractLink;
 import org.apache.wicket.markup.html.link.BookmarkablePageLink;
+import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.resource.JQueryResourceReference;
+
+import ${package}.configuration.WebApplication;
+import ${package}.entities.UserApplication;
+import ${package}.pages.examples.CrudifierSamplePage;
+import ${package}.pages.examples.Option1Page;
+import ${package}.pages.examples.Option2Page;
+import ${package}.pages.examples.Option3Page;
+import ${package}.pages.examples.SamplePage;
+import ${package}.pages.users.ChangePasswordPage;
+
 
 @SuppressWarnings("serial")
 public abstract class TemplatePage extends WebPage {
@@ -21,14 +33,26 @@ public abstract class TemplatePage extends WebPage {
 	protected void onInitialize() {
 		super.onInitialize();
 		
+		add(new DebugBar("debug"));
 		add(new BookmarkablePageLink<WebPage>("home", HomePage.class));
 		
-		add(new Menu("sample", SamplePage.class));
+		add(new Menu("sample", CrudifierSamplePage.class));
 		Menu menu = new Menu("menu");
 		menu.add(new Menu("submenu1", Option1Page.class));
 		menu.add(new Menu("submenu2", Option2Page.class));
 		menu.add(new Menu("submenu3", Option3Page.class));
 		add(menu);
+		
+		// change password
+		add(new BookmarkablePageLink<ChangePasswordPage>("user.change-password", ChangePasswordPage.class));
+		// logout link
+		add(new Link<Void>("user.logout") {
+
+			@Override
+			public void onClick() {
+				getSession().invalidate();
+			}
+		});
 	}
 	
 	@Override
@@ -37,6 +61,9 @@ public abstract class TemplatePage extends WebPage {
 		response.render(new PriorityHeaderItem(JavaScriptHeaderItem.forReference(JQueryResourceReference.get())));
 	}
 	
+	/*
+	 * Class to define the menus
+	 */
 	public class Menu extends WebMarkupContainer {
 		private Class<? extends WebPage> pageClass;
 
@@ -75,5 +102,9 @@ public abstract class TemplatePage extends WebPage {
 			}
 			return ret || TemplatePage.this.getClass().equals(pageClass);
 		}
+	}
+	
+	public UserApplication getLoggedInUser(){
+		return WebApplication.AuthenticatedSession.get().getLoggedInUser();
 	}
 }

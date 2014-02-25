@@ -1,11 +1,12 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.pages;
+package ${package}.pages.examples;
 
 import org.apache.wicket.model.Model;
 
 import ${package}.entities.UserApplication;
+import ${package}.pages.TemplatePage;
 import com.premiumminds.webapp.wicket.bootstrap.crudifier.form.CrudifierForm;
 
 @SuppressWarnings("serial")
