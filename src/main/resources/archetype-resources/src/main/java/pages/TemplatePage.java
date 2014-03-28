@@ -19,9 +19,6 @@ import org.apache.wicket.resource.JQueryResourceReference;
 
 import ${package}.configuration.WebApplication;
 import ${package}.entities.UserApplication;
-import ${package}.pages.examples.CrudifierSamplePage;
-import ${package}.pages.examples.Option1Page;
-import ${package}.pages.examples.Option2Page;
 import ${package}.pages.examples.Option3Page;
 import ${package}.pages.examples.SamplePage;
 import ${package}.pages.users.ChangePasswordPage;
@@ -37,7 +34,7 @@ public abstract class TemplatePage extends WebPage {
 		add(new DebugBar("debug"));
 		add(new BookmarkablePageLink<WebPage>("home", HomePage.class));
 		
-		add(new Menu("sample", CrudifierSamplePage.class));
+		add(new Menu("sample", SamplePage.class));
 		Menu menu = new Menu("usersMenu");
 		menu.add(new Menu("createUsers", CreateUserPage.class));
 		menu.add(new Menu("listUsers", ListUsersPage.class));
