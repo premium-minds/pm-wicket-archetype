@@ -42,6 +42,6 @@ INSERT INTO UserProfile (id, description) VALUES (nextval('user_profile_seq'), '
 INSERT INTO UserProfile_permissions (UserProfile_id, permissions) VALUES
 (currval('user_profile_seq'), 'ACCESS_HOMEPAGE');
 
--- insert user template@premium-minds.com with password 'teste'
+-- insert user template@premium-minds.com with password 'test'
 INSERT INTO UserApplication (id, cipheredPassword, email, name, profile_id, enabled) VALUES (nextval('user_application_seq'), '$2a$10$7QsqZ6HFowLBN/xWf8Q.AOY46b.6ETdxQfgarSC.z0IX0ByHPTofO', 'template@premium-minds.com', 'Template User', currval('user_profile_seq'), TRUE);
 
