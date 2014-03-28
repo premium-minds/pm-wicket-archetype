@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="title">Lista de Utilizadores</entry>
+        <entry key="name.label">Nome</entry>
+        <entry key="email.label">Email</entry>
+        <entry key="profile.label">Perfil</entry>
+        <entry key="enabled.label">Activo</entry>
+        <entry key="newPassword.label">Password</entry>
+        <entry key="newPassword.button.label">Gerar nova</entry>
+        <entry key="ResetUserPasswordInfo">Foi enviado um email com a nova palavra passe!</entry>
+        <entry key="mail.resetUserPassword.title">${applicationTitle} : Pedido de nova Palavra</entry>
+	<entry key="mail.resetUserPassword.message">A palavra passe é a seguinte: </entry>
+</properties>

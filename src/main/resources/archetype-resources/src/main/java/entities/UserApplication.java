@@ -20,6 +20,7 @@ public class UserApplication implements Serializable {
 	@GeneratedValue
 	private int id;
 	@NotEmpty
+	@Email
 	private String email;
 	private String name;
 	private String cipheredPassword;

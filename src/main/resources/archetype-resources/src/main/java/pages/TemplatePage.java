@@ -25,7 +25,8 @@ import ${package}.pages.examples.Option2Page;
 import ${package}.pages.examples.Option3Page;
 import ${package}.pages.examples.SamplePage;
 import ${package}.pages.users.ChangePasswordPage;
-
+import ${package}.pages.users.CreateUserPage;
+import ${package}.pages.users.ListUsersPage;
 
 @SuppressWarnings("serial")
 public abstract class TemplatePage extends WebPage {
@@ -37,9 +38,9 @@ public abstract class TemplatePage extends WebPage {
 		add(new BookmarkablePageLink<WebPage>("home", HomePage.class));
 		
 		add(new Menu("sample", CrudifierSamplePage.class));
-		Menu menu = new Menu("menu");
-		menu.add(new Menu("submenu1", Option1Page.class));
-		menu.add(new Menu("submenu2", Option2Page.class));
+		Menu menu = new Menu("usersMenu");
+		menu.add(new Menu("createUsers", CreateUserPage.class));
+		menu.add(new Menu("listUsers", ListUsersPage.class));
 		menu.add(new Menu("submenu3", Option3Page.class));
 		add(menu);
 		
