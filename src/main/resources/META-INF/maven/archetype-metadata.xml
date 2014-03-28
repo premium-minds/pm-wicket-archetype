@@ -72,5 +72,11 @@
         <include>**/*.launch</include>
       </includes>
     </fileSet>
+    <fileSet encoding="UTF-8" filtered="false">
+      <directory>share</directory>
+      <includes>
+        <include>**/*</include>
+      </includes>
+    </fileSet>
   </fileSets>
 </archetype-descriptor>
