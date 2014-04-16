@@ -8,6 +8,7 @@
     <requiredProperty key="databasePassword"></requiredProperty>
     <requiredProperty key="databaseName"></requiredProperty>
     <requiredProperty key="applicationTitle"></requiredProperty>
+    <requiredProperty key="debugEmail"></requiredProperty>
   </requiredProperties>
   
   <fileSets>

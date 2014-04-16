@@ -141,7 +141,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>wicket-template-archetype</finalName>
+		<finalName>${artifactId}</finalName>
 
 		<plugins>
 			<plugin>
