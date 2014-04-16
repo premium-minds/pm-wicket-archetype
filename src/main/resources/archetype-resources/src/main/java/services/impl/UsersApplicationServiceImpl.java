@@ -91,12 +91,12 @@ public class UsersApplicationServiceImpl extends AbstractServiceImpl implements 
 		}
 		return p;
 	}
-@Override
+	@Override
 	public List<UserApplication> getUsers() {
 		List<UserApplication> users=new ArrayList<>();
 		try{	
 			users =	getEntityManager().createQuery(
-					"SELECT DISTINCT u FROM " + UserApplication.class.getSimpleName() + " u ", 
+					"SELECT DISTINCT u FROM " + UserApplication.class.getSimpleName() + "  u ORDER BY u.name ", 
 					UserApplication.class).getResultList();
 		} catch (NoResultException e){
 			logger.error("Não existem utilizadores");
@@ -107,7 +107,7 @@ public class UsersApplicationServiceImpl extends AbstractServiceImpl implements 
 	@Override
 	public void createUser(UserApplication newUser,String newPasswordMailTitle,String newPasswordMailMessage) throws UserAlreadyExistsException{
 
-		if (userExists(newUser.getEmail()))
+		if (haveAnotherUsersWithThisMail(newUser))
 			throw new UserAlreadyExistsException();
 		try {
 			String newPassword = generateRandomString(8);
@@ -120,7 +120,15 @@ public class UsersApplicationServiceImpl extends AbstractServiceImpl implements 
 			return;
 		}
 	}
-	
+
+
+	@Override
+	public void saveUser(UserApplication user) throws UserAlreadyExistsException{
+		if (haveAnotherUsersWithThisMail(user))
+			throw new UserAlreadyExistsException();
+		getEntityManager().merge(user);
+	}
+
 	@Override
 	public void generateNewPassword(UserApplication user,String resetPasswordMailTitle,String resetPasswordMailMessage) {
 		String newPassword = generateRandomString(8);
@@ -134,18 +142,17 @@ public class UsersApplicationServiceImpl extends AbstractServiceImpl implements 
 		getEntityManager().merge(user);
 	}
 
-	private boolean userExists(String email) {
-		try {
-			getEntityManager().createQuery(
-					"SELECT u FROM " + UserApplication.class.getSimpleName() + " u WHERE u.email=:email", 
-					UserApplication.class)
-					.setParameter("email", email)
-					.getSingleResult();
-		} catch(NoResultException e){
-			return false;
-		}
-		return true;
+	private boolean haveAnotherUsersWithThisMail(UserApplication newUser) {
+		int count;
+		String query="";
+		query="SELECT u FROM " + UserApplication.class.getSimpleName() + " u WHERE u.email=:email";
+		if (newUser.getId()>0)
+			query+=" and NOT u.id="+newUser.getId();
+		count = getEntityManager().createQuery(query, UserApplication.class).setParameter("email", newUser.getEmail()).getResultList().size();
+		return (count > 0) ? true : false;
 	}
+
+
 	
 	//Generate random string of a given size
 	public String generateRandomString(int size){

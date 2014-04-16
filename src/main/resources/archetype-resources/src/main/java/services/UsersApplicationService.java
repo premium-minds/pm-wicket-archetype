@@ -17,8 +17,11 @@ public interface UsersApplicationService {
 
 	void createUser(UserApplication newUser, String newPasswordMaAilTitle,String newPasswordMailMessage) throws UserAlreadyExistsException;
 
+	void saveUser(UserApplication user) throws UserAlreadyExistsException;
+	
 	List<UserApplication> getUsers();
 
 	public void generateNewPassword(UserApplication user,String resetPasswordMailTitle,String resetPasswordMailMessage);
+
 
 }

@@ -1,0 +1,29 @@
+<wicket:panel>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form class="">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<legend>
+					<wicket:message key="title" />
+				</legend>
+				<div class="separator-line"></div>
+				<div class="modal-body">
+					<h5>
+						<wicket:message key="subtitle" />
+					</h5>
+					<div>
+						<div class="left  content-header">
+							<button wicket:id="closeOk" aria-hidden="true"
+								class="btn-flat submit" type="submit" ><wicket:message key="Confirm" /></button>
+
+							<button wicket:id="closeCancel" class="btn-flat back"
+								data-dismiss="modal" aria-hidden="true">
+								<wicket:message key="Cancel" />
+							</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</wicket:panel>

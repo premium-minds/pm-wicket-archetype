@@ -23,6 +23,7 @@ public class UserApplication implements Serializable {
 	@NotEmpty
 	@Email
 	private String email;
+	@NotEmpty
 	private String name;
 	private String cipheredPassword;
 	

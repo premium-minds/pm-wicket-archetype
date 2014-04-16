@@ -9,6 +9,6 @@
         <entry key="newPassword.label">Password</entry>
         <entry key="newPassword.button.label">Gerar nova</entry>
         <entry key="ResetUserPasswordInfo">Foi enviado um email com a nova palavra passe!</entry>
-        <entry key="mail.resetUserPassword.title">${applicationTitle} : Pedido de nova Palavra</entry>
+        <entry key="mail.resetUserPassword.title">Wicket template application Archetype : Pedido de nova Palavra</entry>
 	<entry key="mail.resetUserPassword.message">A palavra passe é a seguinte: </entry>
 </properties>
