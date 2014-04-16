@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiResourceLocking="false" override="true" docBase="<full path to .war>" unpackWAR="false">
+	<Parameter name="configuration" value="deployment" />
+	<Parameter name="logger-config" value="filesystem:<full path to configs>/logback.xml" override="false" />
+	<Parameter name="app-config" value="filesystem:<full path to configs>/application.properties" override="false" />
+	<Parameter name="mailer-config" value="filesystem:<full path to configs>/mailer.properties" override="false" />
+	<Resource name="jdbc/appDatasource" auth="Container"
+	          type="javax.sql.DataSource" driverClassName="org.postgresql.Driver"
+	          url="jdbc:postgresql://localhost:5432/${databaseName}"
+	          username="${databaseUsername}" password="${databasePassword}" maxActive="20" maxIdle="10" maxWait="10000"
+	          validationQuery="SELECT 1"
+</Context>

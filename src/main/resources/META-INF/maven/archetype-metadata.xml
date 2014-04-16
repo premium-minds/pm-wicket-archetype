@@ -75,6 +75,15 @@
       <includes>
         <include>**/*</include>
       </includes>
+      <excludes>
+      	<exclude>deployment/**</exclude>
+      </excludes>
+    </fileSet>
+    <fileSet encoding="UTF-8" filtered="true">
+      <directory>share</directory>
+      <includes>
+        <include>deployment/**</include>
+      </includes>
     </fileSet>
   </fileSets>
 </archetype-descriptor>
