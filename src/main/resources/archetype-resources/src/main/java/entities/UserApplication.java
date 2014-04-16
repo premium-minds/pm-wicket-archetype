@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.NotEmpty;
+import org.hibernate.validator.constraints.Email;
 
 @SuppressWarnings("serial")
 @Entity
@@ -20,7 +21,9 @@ public class UserApplication implements Serializable {
 	@GeneratedValue
 	private int id;
 	@NotEmpty
+	@Email
 	private String email;
+	@NotEmpty
 	private String name;
 	private String cipheredPassword;
 	

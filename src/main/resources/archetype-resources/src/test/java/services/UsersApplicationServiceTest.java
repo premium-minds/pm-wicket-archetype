@@ -15,6 +15,8 @@ import com.google.inject.persist.Transactional;
 import ${package}.entities.UserApplication;
 import ${package}.entities.UserProfile;
 import ${package}.services.impl.UsersApplicationServiceImpl;
+import com.premiumminds.webapp.utils.mailer.AbstractMailer;
+import com.premiumminds.webapp.utils.mailer.SimpleMailer;
 
 public class UsersApplicationServiceTest extends AbstractServiceTest{
 
@@ -75,6 +77,7 @@ public class UsersApplicationServiceTest extends AbstractServiceTest{
 			@Override
 			protected void configure() {
 				bind(UsersApplicationService.class).to(UsersApplicationServiceImpl.class);
+				bind(AbstractMailer.class).to(SimpleMailer.class);
 			}
 		};
 	}

@@ -5,12 +5,11 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 	<entry key="sample">Página de exemplo</entry>
-	<entry key="submenu">Submenu</entry>
-	<entry key="submenu.option1">Opção 1</entry>
-	<entry key="submenu.option2">Opção 2</entry>
+	<entry key="UsersMenu">Utilizadores</entry>
+	<entry key="submenu.CreateUsers">Criar Utilizador</entry>
+	<entry key="submenu.ListUsers">Listar Utilizadores</entry>
 	<entry key="submenu.header">Cabeçalho</entry>
 	<entry key="submenu.option3">Opção 3</entry>
-
 	<entry key="user.change-password">Alterar password</entry>
 	<entry key="user.logout">Sair</entry>
 

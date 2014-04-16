@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="legend">Utilizador</entry>
+	<entry key="form.controls.email.label">Email</entry>
+	<entry key="form.controls.profile.label">Perfil</entry>
+	<entry key="form.controls.name.label">Nome</entry>
+	<entry key="form.controls.enabled.label">Activo</entry>
+	<entry key="submit.label">Gravar</entry>
+	
+	<entry key="createUser.duplicateEmail">Existe um utilizador com o email escolhido.</entry>
+    <entry key="form.controls.email.Required">Campo "Nome" é obrigatório.</entry>
+    <entry key="form.controls.email.Required">Campo "Email" é obrigatório.</entry>
+	<entry key="form.controls.profile.Required">Campo "Perfil" é obrigatório.</entry>
+
+	<entry key="mail.createUser.title">Wicket template application Archetype Novo utilizador</entry>
+	<entry key="mail.createUser.message">A palavra passe é a seguinte: </entry>
+
+</properties>

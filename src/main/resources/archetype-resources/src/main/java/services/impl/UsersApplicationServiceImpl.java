@@ -3,17 +3,34 @@
 #set( $symbol_escape = '\' )
 package ${package}.services.impl;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+
 import javax.inject.Singleton;
 import javax.persistence.NoResultException;
 
 import org.mindrot.jbcrypt.BCrypt;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import com.google.inject.Inject;
 import ${package}.entities.UserApplication;
+import ${package}.entities.UserProfile;
+import ${package}.services.UserAlreadyExistsException;
 import ${package}.services.UserNotFoundException;
 import ${package}.services.UsersApplicationService;
+import com.premiumminds.webapp.utils.mailer.AbstractMailer;
+import com.premiumminds.webapp.utils.mailer.MailerException;
 
 @Singleton
 public class UsersApplicationServiceImpl extends AbstractServiceImpl implements UsersApplicationService {
+	
+	private static final Logger logger = LoggerFactory.getLogger(UsersApplicationServiceImpl.class);
+
+	@Inject AbstractMailer mailer;	
+
 	private static String generatePasswordHash(String password){
 		return BCrypt.hashpw(password, BCrypt.gensalt(10));
 	}
@@ -60,6 +77,92 @@ public class UsersApplicationServiceImpl extends AbstractServiceImpl implements 
 			throw new UserNotFoundException();
 		}
 		
+	}
+
+	@Override
+	public List<UserProfile> getProfiles() {
+		List<UserProfile> p=new ArrayList<>();
+		try{	
+			p =	getEntityManager().createQuery(
+					"SELECT DISTINCT p FROM " + UserProfile.class.getSimpleName() + " p ", 
+					UserProfile.class).getResultList();
+		} catch (NoResultException e){
+			logger.error("Não existem profiles para utilizadores");
+		}
+		return p;
+	}
+	@Override
+	public List<UserApplication> getUsers() {
+		List<UserApplication> users=new ArrayList<>();
+		try{	
+			users =	getEntityManager().createQuery(
+					"SELECT DISTINCT u FROM " + UserApplication.class.getSimpleName() + "  u ORDER BY u.name ", 
+					UserApplication.class).getResultList();
+		} catch (NoResultException e){
+			logger.error("Não existem utilizadores");
+		}
+		return users;
+	}
+	
+	@Override
+	public void createUser(UserApplication newUser,String newPasswordMailTitle,String newPasswordMailMessage) throws UserAlreadyExistsException{
+
+		if (haveAnotherUsersWithThisMail(newUser))
+			throw new UserAlreadyExistsException();
+		try {
+			String newPassword = generateRandomString(8);
+			newUser.setCipheredPassword(generatePasswordHash(newPassword));
+			mailer.send(Arrays.asList(newUser.getEmail()), null, null, newPasswordMailTitle, newPasswordMailMessage + newPassword);
+			getEntityManager().persist(newUser);
+			return;
+		} catch (MailerException e) {
+			logger.error("Invalid user: " +  newUser.getEmail());
+			return;
+		}
+	}
+
+
+	@Override
+	public void saveUser(UserApplication user) throws UserAlreadyExistsException{
+		if (haveAnotherUsersWithThisMail(user))
+			throw new UserAlreadyExistsException();
+		getEntityManager().merge(user);
+	}
+
+	@Override
+	public void generateNewPassword(UserApplication user,String resetPasswordMailTitle,String resetPasswordMailMessage) {
+		String newPassword = generateRandomString(8);
+		try {
+			mailer.send(Arrays.asList(user.getEmail()), null, null, resetPasswordMailTitle, resetPasswordMailMessage + newPassword);
+		} catch (MailerException e) {
+			logger.error("Invalid user: " +  user.getEmail());
+			return;
+		}
+		user.setCipheredPassword(generatePasswordHash(newPassword));
+		getEntityManager().merge(user);
+	}
+
+	private boolean haveAnotherUsersWithThisMail(UserApplication newUser) {
+		int count;
+		String query="";
+		query="SELECT u FROM " + UserApplication.class.getSimpleName() + " u WHERE u.email=:email";
+		if (newUser.getId()>0)
+			query+=" and NOT u.id="+newUser.getId();
+		count = getEntityManager().createQuery(query, UserApplication.class).setParameter("email", newUser.getEmail()).getResultList().size();
+		return (count > 0) ? true : false;
+	}
+
+
+	
+	//Generate random string of a given size
+	public String generateRandomString(int size){
+		Random ran = new Random();
+		char data = ' ';
+		StringBuilder dat = new StringBuilder("");
+		for (int i=0; i<size; i++) {
+			data = (char)(ran.nextInt(25)+97);dat.append(data);
+		}
+		return dat.toString();
 	}
 
 }

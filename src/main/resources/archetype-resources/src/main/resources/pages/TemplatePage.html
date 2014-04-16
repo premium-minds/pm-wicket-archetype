@@ -42,14 +42,14 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li wicket:id="sample"><a wicket:id="link" href="${symbol_pound}"><wicket:message key="sample">Sample Link</wicket:message></a></li>
-            <li class="dropdown" wicket:id="menu">
-              <a href="${symbol_pound}" class="dropdown-toggle" data-toggle="dropdown"><wicket:message key="submenu">Dropdown</wicket:message> <b class="caret"></b></a>
+           <li class="dropdown" wicket:id="usersMenu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><wicket:message key="UsersMenu">Dropdown</wicket:message> <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li wicket:id="submenu1"><a href="${symbol_pound}" wicket:id="link"><wicket:message key="submenu.option1">Option 1</wicket:message></a></li>
-                <li wicket:id="submenu2"><a href="${symbol_pound}" wicket:id="link"><wicket:message key="submenu.option2">Option 2</wicket:message></a></li>
+                <li wicket:id="createUsers"><a href="#" wicket:id="link"><wicket:message key="submenu.CreateUsers">Option 1</wicket:message></a></li>
+                <li wicket:id="listUsers"><a href="#" wicket:id="link"><wicket:message key="submenu.ListUsers">Option 2</wicket:message></a></li>
                 <li class="divider"></li>
                 <li class="dropdown-header"><wicket:message key="submenu.header">Nav header</wicket:message></li>
-                <li wicket:id="submenu3"><a href="${symbol_pound}" wicket:id="link"><wicket:message key="submenu.option3">Option 3</wicket:message></a></li>
+                <li wicket:id="submenu3"><a href="#" wicket:id="link"><wicket:message key="submenu.option3">Option 3</wicket:message></a></li>
               </ul>
             </li>
           </ul>
