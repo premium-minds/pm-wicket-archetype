@@ -41,6 +41,12 @@
       </excludes>
     </fileSet>
     <fileSet filtered="true" encoding="UTF-8">
+      <directory>src/test/resources</directory>
+      <includes>
+        <include>**/*</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
       <directory>src/main/resources/META-INF</directory>
       <includes>
         <include>**/*.xml</include>
