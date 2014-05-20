@@ -19,7 +19,6 @@ import org.apache.wicket.resource.JQueryResourceReference;
 
 import ${package}.configuration.WebApplication;
 import ${package}.entities.UserApplication;
-import ${package}.pages.examples.Option3Page;
 import ${package}.pages.examples.SamplePage;
 import ${package}.pages.users.ChangePasswordPage;
 import ${package}.pages.users.CreateUserPage;
@@ -38,7 +37,6 @@ public abstract class TemplatePage extends WebPage {
 		Menu menu = new Menu("usersMenu");
 		menu.add(new Menu("createUsers", CreateUserPage.class));
 		menu.add(new Menu("listUsers", ListUsersPage.class));
-		menu.add(new Menu("submenu3", Option3Page.class));
 		add(menu);
 		
 		// change password

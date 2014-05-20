@@ -63,7 +63,8 @@ public class ListUsersPage extends TemplatePage {
 			@Override
 			public void onClick(IModel<UserApplication> model,AjaxRequestTarget target) {
 				selectedUser=model.getObject();
-				target.prependJavaScript("$('#"+modal.getMarkupId()+"').modal('show');");
+				modal.show();
+				target.add(modal);
 			}
 		});
 		
