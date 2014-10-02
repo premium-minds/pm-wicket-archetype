@@ -48,7 +48,9 @@ If your database doesn't exist you will be asked if the script can create it. Ne
 ```bash
 mvn jetty:run
 ```
-And open your favorite browser at [http://localhost:8080](http://localhost:8080)
+And open your favorite browser at [http://localhost:8080](http://localhost:8080).
+
+The default user is `template@premium-minds.com` with password `test`
 
 ##Licence
 Copyright (C) 2014 [Premium Minds](http://www.premium-minds.com/)
