@@ -1,7 +1,7 @@
 pm-wicket-archetype
 ===================
 
-Template to create a web application with Wicket + Guice + Hibernate
+Web application template with support for Wicket + Guice + Hibernate
 
 ## Requirements
 
@@ -11,48 +11,48 @@ Template to create a web application with Wicket + Guice + Hibernate
 * Bash (optional)
 * PostgreSQL client (optional)
 
-## Running your project in less than 5 minutes
+## Run your project in less than 5 minutes
 
-### Create project
+### Setup project
 
-Run the following in your command line:
+Open your command-line terminal and run the following commands:
 ```bash
 mvn archetype:generate -DarchetypeGroupId=com.premiumminds -DarchetypeArtifactId=pm-wicket-archetype
 ```
-Next you will be asked to fill the following properties:
-* `groupId` - the group id for your application
-* `artifactId` - your application artifact name
+Next, you will be asked to fill in the following properties:
+* `groupId` - the group id for your application artifact
+* `artifactId` - the artifact name of the application
 * `version` - your initial version (defaults to *1.0-SNAPSHOT*)
-* `package` - java package for the project (usually `groupId`.`artifactId`)
-* `applicationTitle` - this is the full name of your project, will appear at your application homepage
-* `databaseHost` - the host of your DEV database, usually *localhost* (port defaults to *5432*)
-* `databaseName` - database name for your DEV environment (doesn't need to already exist)
-* `databasePassword` - password to access your database
-* `databaseUsername` - username to access your database
-* `debugEmail` - all emails will be sent to this address in DEV
+* `package` - the project's base java package (usually `groupId`.`artifactId`)
+* `applicationTitle` - the full name of your project. It will show up in your application's homepage
+* `databaseHost` - the developmnent database host. Usually *localhost* (port defaults to *5432*)
+* `databaseName` - the development database name (doesn't need to already exist)
+* `databasePassword` - The database password
+* `databaseUsername` - The database username
+* `debugEmail` - all emails will be sent to this address, while in DEV environment
 
-Then confirm all your properties and your project is complete :)
+Now validate that all your properties are correct and confirm. Your project is now set up :)
 
 ### Create database schema
 
-To create the database schema (and database) run the following command:
+Just run the following command to create the database and corresponding schema:
 ```bash
 cd <project dir>
 bash share/scripts/apply_sql.sh
 ```
-If your database doesn't exist you will be asked if the script can create it. Next all SQL scripts are executed and the application schema is created.
+If the database doesn't exist, you will be prompted for permission to create it. Following this, all SQL scripts are executed, setting up your database automatically.
 
 ### Run it
 
-...now the moment you are waiting for, just type:
+...now for the moment you've been waiting for, just type in:
 ```bash
 mvn jetty:run
 ```
-And open your favorite browser at [http://localhost:8080](http://localhost:8080).
+Open your favorite browser at [http://localhost:8080](http://localhost:8080). You will be presented with your application's login screen.
 
 The default user is `template@premium-minds.com` with password `test`
 
-##Licence
+##License
 Copyright (C) 2014 [Premium Minds](http://www.premium-minds.com/)
 
 Licensed under the [GNU Lesser General Public Licence](http://www.gnu.org/licenses/lgpl.html)
