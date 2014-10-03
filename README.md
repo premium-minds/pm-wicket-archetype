@@ -38,7 +38,7 @@ Then confirm all your properties and your project is complete :)
 To create the database schema (and database) run the following command:
 ```bash
 cd <project dir>
-sh share/scripts/apply_sql.sh
+bash share/scripts/apply_sql.sh
 ```
 If your database doesn't exist you will be asked if the script can create it. Next all SQL scripts are executed and the application schema is created.
 
