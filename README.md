@@ -15,7 +15,7 @@ Web application template with support for Wicket + Guice + Hibernate
 
 ### Setup project
 
-Open your command-line terminal and run the following commands:
+Open your terminal and run the following command:
 ```bash
 mvn archetype:generate -DarchetypeGroupId=com.premiumminds -DarchetypeArtifactId=pm-wicket-archetype
 ```
@@ -25,7 +25,7 @@ Next, you will be asked to fill in the following properties:
 * `version` - your initial version (defaults to *1.0-SNAPSHOT*)
 * `package` - the project's base java package (usually `groupId`.`artifactId`)
 * `applicationTitle` - the full name of your project. It will show up in your application's homepage
-* `databaseHost` - the developmnent database host. Usually *localhost* (port defaults to *5432*)
+* `databaseHost` - the development database host. Usually *localhost* (port defaults to *5432*)
 * `databaseName` - the development database name (doesn't need to already exist)
 * `databasePassword` - The database password
 * `databaseUsername` - The database username
