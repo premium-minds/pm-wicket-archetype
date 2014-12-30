@@ -1,0 +1,15 @@
+# Premium-minds - pm-wicket-utils .travis.yml
+
+language: java
+
+script: mvn integration-test
+
+# Avoid default OracleJDK7. Complies with Eclipse environment used
+jdk:
+    - openjdk6
+
+notifications:
+    email:
+        recipients:
+            - andre.camilo@premium-minds.com
+        on_failure: always
