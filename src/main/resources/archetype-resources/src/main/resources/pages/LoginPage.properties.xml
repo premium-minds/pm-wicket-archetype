@@ -8,10 +8,10 @@
 	<entry key="email.label">Email</entry>
 	<entry key="password.label">Password</entry>
 
-	<entry key="form.email.Required">O Email é obrigatório.</entry>
-	<entry key="form.password.Required">A password é obrigatória.</entry>
-	<entry key="form.login.invalid">Email ou password inválida.</entry>
+	<entry key="form.email.Required">Please provide an email.</entry>
+	<entry key="form.password.Required">Password is required.</entry>
+	<entry key="form.login.invalid">Email or password are incorrect.</entry>
 
-	<entry key="login.action">Entrar</entry>
+	<entry key="login.action">Login</entry>
 
 </properties>

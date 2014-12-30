@@ -21,11 +21,11 @@ import ${package}.entities.UserProfile;
 import ${package}.pages.TemplatePage;
 import ${package}.services.UserAlreadyExistsException;
 import ${package}.services.UsersApplicationService;
-import com.premiumminds.webapp.wicket.bootstrap.crudifier.IObjectRenderer;
-import com.premiumminds.webapp.wicket.bootstrap.crudifier.form.CrudifierEntitySettings;
-import com.premiumminds.webapp.wicket.bootstrap.crudifier.form.CrudifierForm;
-import com.premiumminds.webapp.wicket.bootstrap.crudifier.form.CrudifierFormSettings;
-import com.premiumminds.webapp.wicket.bootstrap.crudifier.form.EntityProvider;
+import com.premiumminds.wicket.crudifier.IObjectRenderer;
+import com.premiumminds.wicket.crudifier.form.CrudifierEntitySettings;
+import com.premiumminds.wicket.crudifier.form.CrudifierForm;
+import com.premiumminds.wicket.crudifier.form.CrudifierFormSettings;
+import com.premiumminds.wicket.crudifier.form.EntityProvider;
 
 @AuthorizeInstantiation(Permissions.ACCESS_HOMEPAGE)
 @SuppressWarnings("serial")

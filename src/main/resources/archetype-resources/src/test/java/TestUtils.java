@@ -18,7 +18,7 @@ public class TestUtils {
 		for (int i = 0;i<size;i++){
 			UserProfile profile = new UserProfile();
 			profile.setDescription("description " + i);
-			profile.setPermissions(new HashSet<String>(Arrays.asList("permissão 1","permissão 2")));
+			profile.setPermissions(new HashSet<String>(Arrays.asList("permission 1","permission 2")));
 			list.add(profile);
 		}
 		return list;

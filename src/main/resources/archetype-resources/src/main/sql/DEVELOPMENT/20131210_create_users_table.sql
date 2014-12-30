@@ -38,7 +38,7 @@
     create sequence user_profile_seq;
 
 -- insert profile with permissions
-INSERT INTO UserProfile (id, description) VALUES (nextval('user_profile_seq'), 'Utilizadores');
+INSERT INTO UserProfile (id, description) VALUES (nextval('user_profile_seq'), 'Users');
 INSERT INTO UserProfile_permissions (UserProfile_id, permissions) VALUES
 (currval('user_profile_seq'), 'ACCESS_HOMEPAGE');
 

@@ -18,17 +18,8 @@ $symbol_escape = '\' )
 		</encoder>
 	</appender>
 
-	<appender name="GELF" class="me.moocar.logbackgelf.GelfAppender">
-		<facility>${artifactId}</facility>
-		<graylog2ServerHost>cusco.premium-minds.com</graylog2ServerHost>
-		<useThreadName>true</useThreadName>
-		<messagePattern>%m%rEx</messagePattern>
-		<shortMessagePattern>%.-100(%m%rEx)</shortMessagePattern>
-	</appender>
-
 	<root level="INFO">
 		<appender-ref ref="FILE-INFO" />
-		<appender-ref ref="GELF" />
 	</root>
 
 </configuration>

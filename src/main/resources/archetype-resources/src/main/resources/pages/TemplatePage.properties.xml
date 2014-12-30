@@ -4,13 +4,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
-	<entry key="sample">Página de exemplo</entry>
-	<entry key="UsersMenu">Utilizadores</entry>
-	<entry key="submenu.CreateUsers">Criar Utilizador</entry>
-	<entry key="submenu.ListUsers">Listar Utilizadores</entry>
-	<entry key="submenu.header">Cabeçalho</entry>
-	<entry key="submenu.option3">Opção 3</entry>
-	<entry key="user.change-password">Alterar password</entry>
-	<entry key="user.logout">Sair</entry>
+	<entry key="sample">Sample page</entry>
+	<entry key="UsersMenu">Users</entry>
+	<entry key="submenu.CreateUsers">Create user</entry>
+	<entry key="submenu.ListUsers">List users</entry>
+	<entry key="submenu.header">Header</entry>
+	<entry key="submenu.option3">Option 3</entry>
+	<entry key="user.change-password">Change password</entry>
+	<entry key="user.logout">Logout</entry>
 
 </properties>

@@ -87,7 +87,7 @@ public class UsersApplicationServiceImpl extends AbstractServiceImpl implements 
 					"SELECT DISTINCT p FROM " + UserProfile.class.getSimpleName() + " p ", 
 					UserProfile.class).getResultList();
 		} catch (NoResultException e){
-			logger.error("Não existem profiles para utilizadores");
+			logger.error("There are no profiles on the system");
 		}
 		return p;
 	}
@@ -99,7 +99,7 @@ public class UsersApplicationServiceImpl extends AbstractServiceImpl implements 
 					"SELECT DISTINCT u FROM " + UserApplication.class.getSimpleName() + "  u ORDER BY u.name ", 
 					UserApplication.class).getResultList();
 		} catch (NoResultException e){
-			logger.error("Não existem utilizadores");
+			logger.error("There are no users on the system");
 		}
 		return users;
 	}

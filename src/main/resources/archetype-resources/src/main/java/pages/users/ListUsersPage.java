@@ -16,8 +16,10 @@ import ${package}.entities.UserProfile;
 import ${package}.pages.TemplatePage;
 import ${package}.services.UsersApplicationService;
 import com.premiumminds.webapp.wicket.bootstrap.BootstrapFeedbackPanel;
-import com.premiumminds.webapp.wicket.bootstrap.crudifier.IObjectRenderer;
-import com.premiumminds.webapp.wicket.bootstrap.crudifier.table.*;
+import com.premiumminds.wicket.crudifier.IObjectRenderer;
+import com.premiumminds.wicket.crudifier.table.ButtonColumn;
+import com.premiumminds.wicket.crudifier.table.CrudifierTable;
+import com.premiumminds.wicket.crudifier.table.PropertyColumn;
 
 @AuthorizeInstantiation(Permissions.ACCESS_HOMEPAGE)
 @SuppressWarnings("serial")

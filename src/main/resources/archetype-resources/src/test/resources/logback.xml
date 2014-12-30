@@ -6,7 +6,7 @@
       <pattern>%5p [%thread] %F:%line - %msg%n</pattern>
     </encoder>
   </appender>
-  <logger name="com.premiumminds" level="INFO"/>
+  <logger name="${package}" level="INFO"/>
   <root level="WARN">
     <appender-ref ref="Stdout"/>
   </root>
