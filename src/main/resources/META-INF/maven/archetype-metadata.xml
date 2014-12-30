@@ -9,6 +9,10 @@
     <requiredProperty key="databaseName"></requiredProperty>
     <requiredProperty key="applicationTitle"></requiredProperty>
     <requiredProperty key="debugEmail"></requiredProperty>
+    <requiredProperty key="SMTPServer"></requiredProperty>
+    <requiredProperty key="SMTPFrom"></requiredProperty>
+    <requiredProperty key="SMTPUsername"></requiredProperty>
+    <requiredProperty key="SMTPPassword"></requiredProperty>
   </requiredProperties>
   
   <fileSets>
