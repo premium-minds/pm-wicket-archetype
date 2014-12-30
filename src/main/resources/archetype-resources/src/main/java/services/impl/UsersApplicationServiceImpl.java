@@ -16,11 +16,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.inject.Inject;
+
 import ${package}.entities.UserApplication;
 import ${package}.entities.UserProfile;
 import ${package}.services.UserAlreadyExistsException;
 import ${package}.services.UserNotFoundException;
 import ${package}.services.UsersApplicationService;
+
 import com.premiumminds.webapp.utils.mailer.AbstractMailer;
 import com.premiumminds.webapp.utils.mailer.MailerException;
 
@@ -109,16 +111,17 @@ public class UsersApplicationServiceImpl extends AbstractServiceImpl implements 
 
 		if (haveAnotherUsersWithThisMail(newUser))
 			throw new UserAlreadyExistsException();
+		
+		String newPassword = generateRandomString(8);
+		newUser.setCipheredPassword(generatePasswordHash(newPassword));
+		
 		try {
-			String newPassword = generateRandomString(8);
-			newUser.setCipheredPassword(generatePasswordHash(newPassword));
 			mailer.send(Arrays.asList(newUser.getEmail()), null, null, newPasswordMailTitle, newPasswordMailMessage + newPassword);
-			getEntityManager().persist(newUser);
-			return;
 		} catch (MailerException e) {
-			logger.error("Invalid user: " +  newUser.getEmail());
-			return;
+			throw new RuntimeException("error sending email to user", e);
 		}
+		
+		getEntityManager().persist(newUser);
 	}
 
 
@@ -135,8 +138,7 @@ public class UsersApplicationServiceImpl extends AbstractServiceImpl implements 
 		try {
 			mailer.send(Arrays.asList(user.getEmail()), null, null, resetPasswordMailTitle, resetPasswordMailMessage + newPassword);
 		} catch (MailerException e) {
-			logger.error("Invalid user: " +  user.getEmail());
-			return;
+			throw new RuntimeException("error sending email to user", e);
 		}
 		user.setCipheredPassword(generatePasswordHash(newPassword));
 		getEntityManager().merge(user);
