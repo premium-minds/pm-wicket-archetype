@@ -4,7 +4,7 @@
 
 	<groupId>com.premiumminds</groupId>
 	<artifactId>pm-wicket-archetype</artifactId>
-	<version>1.2-SNAPSHOT</version>
+	<version>1.2</version>
 	<packaging>maven-archetype</packaging>
 
 	<name>pm-wicket-archetype</name>
@@ -30,7 +30,7 @@
 		<url>https://github.com/premium-minds/pm-wicket-archetype</url>
 		<connection>scm:git:git@github.com:premium-minds/pm-wicket-archetype.git</connection>
 		<developerConnection>scm:git:git@github.com:premium-minds/pm-wicket-archetype.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>v1.2</tag>
 	</scm>
 
 	<developers>
