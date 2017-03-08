@@ -35,7 +35,7 @@ public class LoginPage extends WebPage {
 			}
 			
 			protected void onSubmit() {
-				if(getWebApplication().authenticate(email.getModelObject(), password.getModelObject())){
+				if(((WebApplication)getWebApplication()).authenticate(email.getModelObject(), password.getModelObject())){
 					continueToOriginalDestination();
 					throw new RestartResponseException(getApplication().getHomePage());
 				} else {
@@ -64,8 +64,5 @@ public class LoginPage extends WebPage {
 		response.render(JavaScriptHeaderItem.forReference(getApplication().getJavaScriptLibrarySettings()
 	            .getJQueryReference())); 
 	}
-	
-	public WebApplication getWebApplication(){
-		return (WebApplication) getApplication();
-	}
+
 }
