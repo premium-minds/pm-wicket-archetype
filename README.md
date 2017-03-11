@@ -5,7 +5,7 @@ Web application template with support for Wicket + Guice + Hibernate
 
 ## Requirements
 
-* Java 7
+* Java 8
 * Maven
 * PostgreSQL server 9.x
 * Bash (optional)
