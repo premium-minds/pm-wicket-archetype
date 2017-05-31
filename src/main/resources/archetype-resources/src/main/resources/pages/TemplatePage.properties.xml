@@ -10,6 +10,7 @@
 	<entry key="submenu.ListUsers">List users</entry>
 	<entry key="submenu.header">Header</entry>
 	<entry key="submenu.option3">Option 3</entry>
+	<entry key="UserMenu">User</entry>
 	<entry key="user.change-password">Change password</entry>
 	<entry key="user.logout">Logout</entry>
 
