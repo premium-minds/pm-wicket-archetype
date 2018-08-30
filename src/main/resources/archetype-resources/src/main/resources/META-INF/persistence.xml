@@ -9,7 +9,7 @@
 
 	<!-- A JPA Persistence Unit -->
 	<persistence-unit name="app-data-unit" transaction-type="RESOURCE_LOCAL">
-		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<non-jta-data-source>java:comp/env/jdbc/appDatasource</non-jta-data-source>
 
 	    <mapping-file>META-INF/ormapping.xml</mapping-file>
@@ -19,10 +19,21 @@
 			<property name="hibernate.hbm2ddl.auto" value="validate"/>
 		</properties>
 	</persistence-unit>
-	
+
+    <!-- A JPA Persistence Unit for DDL generation -->
+    <persistence-unit name="app-data-unit-ddl" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <mapping-file>META-INF/ormapping.xml</mapping-file>
+            
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+        </properties>
+    </persistence-unit>
+
 	<!-- A JPA Persistence Unit for testing-->
 	<persistence-unit name="app-data-unit-test" transaction-type="RESOURCE_LOCAL">
-		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		
 	    <mapping-file>META-INF/ormapping.xml</mapping-file>
 	    

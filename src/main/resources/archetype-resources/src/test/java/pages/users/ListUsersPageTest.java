@@ -16,11 +16,9 @@ import ${package}.pages.HomePage;
 import ${package}.services.UserAlreadyExistsException;
 import ${package}.services.UsersApplicationService;
 
-public class ListUsersPageTest extends AbstractLoggedInPageTest{
-	
+public class ListUsersPageTest extends AbstractLoggedInPageTest {
 	@Inject UsersApplicationService usersService;
 
-	
 	@Test
 	public void testRender() throws UserAlreadyExistsException {
 		addPermission(Permissions.ACCESS_HOMEPAGE);
@@ -32,7 +30,7 @@ public class ListUsersPageTest extends AbstractLoggedInPageTest{
 		
 		verifyAll();
 	}
-	
+
 	@Test
 	public void testRenderAndClick() throws UserAlreadyExistsException {
 		addPermission(Permissions.ACCESS_HOMEPAGE);
@@ -43,11 +41,11 @@ public class ListUsersPageTest extends AbstractLoggedInPageTest{
 		getTester().startPage(HomePage.class);
 		getTester().clickLink("usersMenu:listUsers:link");
 		getTester().assertRenderedPage(ListUsersPage.class);
-		getTester().executeAjaxEvent("usersTable:table:list:0", "onclick");
+		getTester().executeAjaxEvent("usersTable:table:list:0", "click");
 		getTester().assertRenderedPage(CreateUserPage.class);
 		verifyAll();
 	}
-	
+
 	@Test
 	public void testGenerateNewPassWord() throws UserAlreadyExistsException {
 		addPermission(Permissions.ACCESS_HOMEPAGE);
@@ -61,9 +59,6 @@ public class ListUsersPageTest extends AbstractLoggedInPageTest{
 		getTester().assertRenderedPage(ListUsersPage.class);
 		verifyAll();
 	}
-	
-	
-	
 
 	@Override
 	public AbstractModule getTestModule() {
@@ -74,5 +69,4 @@ public class ListUsersPageTest extends AbstractLoggedInPageTest{
 			}
 		};
 	}
-
 }

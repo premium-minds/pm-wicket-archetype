@@ -45,8 +45,8 @@ public class ChangePasswordPage extends TemplatePage {
 		
 		form.add(new AjaxSubmitLink("submit") {
 			@Override
-			protected void onSubmit(AjaxRequestTarget target, Form<?> form) {
-				target.add(form);
+			protected void onSubmit(AjaxRequestTarget target) {
+				target.add(getForm());
 				
 				try {
 					service.changePassword(getLoggedInUser(), currentPassword.getModelObject(), newPassword.getModelObject());
@@ -57,8 +57,8 @@ public class ChangePasswordPage extends TemplatePage {
 			}
 			
 			@Override
-			protected void onError(AjaxRequestTarget target, Form<?> form) {
-				target.add(form);
+			protected void onError(AjaxRequestTarget target) {
+				target.add(getForm());
 			}
 		});
 		

@@ -39,12 +39,7 @@ Now validate that all your properties are correct and confirm. Your project is n
 
 ### Create database schema
 
-Just run the following command to create the database and corresponding schema:
-```bash
-cd <project dir>
-bash share/scripts/apply_sql.sh
-```
-If the database doesn't exist, you will be prompted for permission to create it. Following this, all SQL scripts are executed, setting up your database automatically.
+Create the database manually. The archetype includes Flyway and will create the schema automatically when it runs.
 
 ### Run it
 

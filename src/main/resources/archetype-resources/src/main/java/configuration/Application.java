@@ -5,6 +5,7 @@ package ${package}.configuration;
 
 import javax.inject.Inject;
 
+import org.flywaydb.core.Flyway;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,22 +24,27 @@ public class Application extends WebApplication {
 	@Override
 	protected void init() {
 		try {
+            Flyway flyway = new Flyway();
+            flyway.setDataSource("jdbc:postgresql://localhost/udifar-mvp", "postgres", "postgres");
+            flyway.setLocations("filesystem:src/main/sql/migrations");
+            flyway.migrate();
+
 			persistService.start();
-	
+
 			getRequestCycleListeners().add(new TransactionalRequestCycleListener(persistenceTransaction));
-			
+
 			super.init();
 		} catch(Throwable t){
 			log.error("error starting application", t);
 			throw t;
 		}
 	}
-	
+
 	@Override
 	protected void finalize() throws Throwable {
 		try {
 			super.finalize();
-			
+
 			persistService.stop();
 		} catch(Throwable t){
 			log.error("error ending application", t);

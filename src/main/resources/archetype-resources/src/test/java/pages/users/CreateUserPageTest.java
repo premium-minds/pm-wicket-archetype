@@ -20,10 +20,9 @@ import ${package}.pages.HomePage;
 import ${package}.services.UserAlreadyExistsException;
 import ${package}.services.UsersApplicationService;
 
-public class CreateUserPageTest extends AbstractLoggedInPageTest{
-
+public class CreateUserPageTest extends AbstractLoggedInPageTest {
 	@Inject UsersApplicationService usersService;
-	
+
 	@Test
 	public void testRenderPage() {
 		addPermission(Permissions.ACCESS_HOMEPAGE);
@@ -35,7 +34,7 @@ public class CreateUserPageTest extends AbstractLoggedInPageTest{
 		getTester().assertInvisible("form:feedbackError:feedbackul:messages");
 		verifyAll();
 	}
-	
+
 	@Test
 	public void testSubmitWithError() {
 		addPermission(Permissions.ACCESS_HOMEPAGE);
@@ -44,11 +43,11 @@ public class CreateUserPageTest extends AbstractLoggedInPageTest{
 		getTester().startPage(HomePage.class);
 		getTester().clickLink("usersMenu:createUsers:link");
 		getTester().assertRenderedPage(CreateUserPage.class);
-		getTester().executeAjaxEvent("form:submit", "onclick");
+		getTester().executeAjaxEvent("form:submit", "click");
 		getTester().assertVisible("form:feedbackError:feedbackul:messages");
 		verifyAll();
 	}
-	
+
 	@Test
 	public void testSubmitWithError2() {
 		addPermission(Permissions.ACCESS_HOMEPAGE);
@@ -61,11 +60,11 @@ public class CreateUserPageTest extends AbstractLoggedInPageTest{
 		FormTester form = getTester().newFormTester("form");
 		form.setValue("controls:controlGroup:1:controlGroup:inputBox:input", "nome");
 		form.setValue("controls:controlGroup:2:controlGroup:inputBox:input", "mail@mail.com");
-		getTester().executeAjaxEvent("form:submit", "onclick");
+		getTester().executeAjaxEvent("form:submit", "click");
 		getTester().assertVisible("form:feedbackError:feedbackul:messages");
 		verifyAll();
 	}
-	
+
 	@Test
 	public void testSubmitWithError3() {
 		addPermission(Permissions.ACCESS_HOMEPAGE);
@@ -79,11 +78,11 @@ public class CreateUserPageTest extends AbstractLoggedInPageTest{
 		form.setValue("controls:controlGroup:1:controlGroup:inputBox:input", "nome");
 		form.setValue("controls:controlGroup:2:controlGroup:inputBox:input", "mail");
 		form.select("controls:controlGroup:3:controlGroup:inputBox:input", 1);
-		getTester().executeAjaxEvent("form:submit", "onclick");
+		getTester().executeAjaxEvent("form:submit", "click");
 		getTester().assertVisible("form:feedbackError:feedbackul:messages");
 		verifyAll();
 	}
-	
+
 	@Test
 	public void testSubmit() throws UserAlreadyExistsException {
 		addPermission(Permissions.ACCESS_HOMEPAGE);
@@ -99,12 +98,11 @@ public class CreateUserPageTest extends AbstractLoggedInPageTest{
 		form.setValue("controls:controlGroup:1:controlGroup:inputBox:input", "nome");
 		form.setValue("controls:controlGroup:2:controlGroup:inputBox:input", "mail@mail.com");
 		form.select("controls:controlGroup:3:controlGroup:inputBox:input", 1);
-		getTester().executeAjaxEvent("form:submit", "onclick");
+		getTester().executeAjaxEvent("form:submit", "click");
 		getTester().assertRenderedPage(ListUsersPage.class);
 		verifyAll();
 	}
-	
-	
+
 	@Override
 	public AbstractModule getTestModule() {
 		return new AbstractModule() {
@@ -114,5 +112,4 @@ public class CreateUserPageTest extends AbstractLoggedInPageTest{
 			}
 		};
 	}
-
 }

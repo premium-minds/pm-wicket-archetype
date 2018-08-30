@@ -54,7 +54,8 @@ public abstract class TemplatePage extends WebPage {
 	@Override
 	public void renderHead(IHeaderResponse response) {
 		super.renderHead(response);
-		response.render(new PriorityHeaderItem(JavaScriptHeaderItem.forReference(JQueryResourceReference.get())));
+        response.render(new PriorityHeaderItem(JavaScriptHeaderItem.forReference(getApplication().getJavaScriptLibrarySettings()
+                .getJQueryReference())));
 	}
 	
 	/*
@@ -92,10 +93,8 @@ public abstract class TemplatePage extends WebPage {
 		}
 		
 		private boolean isActive(){
-			boolean ret = false;
-			for(Component submenu : visitChildren(Menu.class)){
-				ret |= ((Menu) submenu).isActive(); 
-			}
+            boolean ret = streamChildren().filter(c -> c instanceof Menu).anyMatch(c -> ((Menu)c).isActive());
+
 			return ret || TemplatePage.this.getClass().equals(pageClass);
 		}
 	}
