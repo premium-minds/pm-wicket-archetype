@@ -51,12 +51,14 @@ Open your favorite browser at [http://localhost:8080](http://localhost:8080). Yo
 
 The default user is `template@premium-minds.com` with password `test`
 
-##Continuous Integration
+## Continuous Integration
+
 [![Build Status](https://travis-ci.org/premium-minds/pm-wicket-archetype.png?branch=master)](https://travis-ci.org/premium-minds/pm-wicket-archetype)
 
 CI is hosted by [travis-ci.org](https://travis-ci.org/)
 
-##License
+## License
+
 Copyright (C) 2014 [Premium Minds](http://www.premium-minds.com/)
 
 Licensed under the [GNU Lesser General Public Licence](http://www.gnu.org/licenses/lgpl.html)
