@@ -135,13 +135,6 @@
 			<version>1.6.2</version>
 		</dependency>
 
-		<!-- JODA -->
-		<dependency>
-			<groupId>joda-time</groupId>
-			<artifactId>joda-time</artifactId>
-			<version>2.10</version>
-		</dependency>
-		
 		<!-- TESTS -->
 		<dependency>
 			<groupId>junit</groupId>
