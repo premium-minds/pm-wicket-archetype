@@ -38,12 +38,12 @@
 		<dependency>
 			<groupId>com.premiumminds</groupId>
 			<artifactId>pm-wicket-utils</artifactId>
-			<version>4.1</version>
+			<version>4.2</version>
 		</dependency>
 		<dependency>
 		   <groupId>com.premiumminds</groupId>
 		   <artifactId>wicket-crudifier</artifactId>
-		   <version>4.0</version>
+		   <version>4.1</version>
 		</dependency>
 
 		<!-- WICKET DEPENDENCIES -->
@@ -135,13 +135,6 @@
 			<version>1.6.2</version>
 		</dependency>
 
-		<!-- JODA -->
-		<dependency>
-			<groupId>joda-time</groupId>
-			<artifactId>joda-time</artifactId>
-			<version>2.10</version>
-		</dependency>
-		
 		<!-- TESTS -->
 		<dependency>
 			<groupId>junit</groupId>
