@@ -38,12 +38,12 @@
 		<dependency>
 			<groupId>com.premiumminds</groupId>
 			<artifactId>pm-wicket-utils</artifactId>
-			<version>4.1</version>
+			<version>4.2</version>
 		</dependency>
 		<dependency>
 		   <groupId>com.premiumminds</groupId>
 		   <artifactId>wicket-crudifier</artifactId>
-		   <version>4.0</version>
+		   <version>4.1</version>
 		</dependency>
 
 		<!-- WICKET DEPENDENCIES -->
