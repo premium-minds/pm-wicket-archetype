@@ -101,7 +101,7 @@
 		<dependency>
 		    <groupId>org.flywaydb</groupId>
 		    <artifactId>flyway-core</artifactId>
-		    <version>5.1.4</version>
+		    <version>5.2.1</version>
 		</dependency>
 
 		<!-- GUICE -->
@@ -186,7 +186,7 @@
 					<dependency>
 						<groupId>org.postgresql</groupId>
 						<artifactId>postgresql</artifactId>
-						<version>9.4-1201-jdbc41</version>
+						<version>42.2.5</version>
 					</dependency>
 				</dependencies>
 			</plugin>
@@ -197,13 +197,16 @@
 				<version>1.8</version>
 				<executions>
 					<execution>
-						<phase>package</phase>
+						<id>sql-prepare-package</id>
+						<phase>prepare-package</phase>
 						<configuration>
 							<target>
-								<property name="sql.dir.new" value="${basedir}/src/main/sql/DEVELOPMENT" />
-								<property name="sql.dir.version"
-									value="${basedir}/src/main/sql/v${project.version}" />
-								<ant antfile="${basedir}/share/scripts/ant_generate_sql.xml" />
+								<property name="sql.dir.dev" value="${basedir}/src/main/sql/DEVELOPMENT" />
+								<property name="sql.dir.flyway"
+									value="${basedir}/src/main/resources/migrations" />
+								<property name="sql.dir.build"
+									value="${project.build.directory}/classes/migrations" />
+								<ant antfile="${basedir}/share/scripts/ant_generate_sql_flyway.xml" />
 							</target>
 						</configuration>
 						<goals>

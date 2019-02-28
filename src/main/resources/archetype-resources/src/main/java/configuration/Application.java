@@ -4,6 +4,9 @@
 package ${package}.configuration;
 
 import javax.inject.Inject;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
 
 import org.flywaydb.core.Flyway;
 import org.slf4j.Logger;
@@ -24,10 +27,13 @@ public class Application extends WebApplication {
 	@Override
 	protected void init() {
 		try {
-            Flyway flyway = new Flyway();
-            flyway.setDataSource("jdbc:postgresql://localhost/udifar-mvp", "postgres", "postgres");
-            flyway.setLocations("filesystem:src/main/sql/migrations");
-            flyway.migrate();
+			Context initContext = new InitialContext();
+			Context webContext = (Context)initContext.lookup("java:/comp/env");
+
+			DataSource ds = (DataSource) webContext.lookup("jdbc/appDatasource");
+			
+			Flyway flyway = Flyway.configure().locations("migrations").dataSource(ds).load();
+			flyway.migrate();
 
 			persistService.start();
 
@@ -36,7 +42,7 @@ public class Application extends WebApplication {
 			super.init();
 		} catch(Throwable t){
 			log.error("error starting application", t);
-			throw t;
+			throw new RuntimeException("could not start application", t);
 		}
 	}
 
