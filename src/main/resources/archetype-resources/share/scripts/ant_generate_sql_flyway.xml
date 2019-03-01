@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="generate-sql" default="main">
+	<target name="main">
+		<concat destfile="${sql.dir.flyway}/V${project.version}__version_${project.version}.sql" append="yes">
+			<fileset dir="${sql.dir.dev}" includes="**/*.sql" />
+		</concat>
+		<delete>
+			<fileset dir="${sql.dir.dev}" includes="**/*.sql" />
+		</delete>
+		<copy todir="${sql.dir.build}" overwrite="false">
+			<fileset dir="${sql.dir.flyway}" includes="**/*.sql" />
+		</copy>
+	</target>
+</project>

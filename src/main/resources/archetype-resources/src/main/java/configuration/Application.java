@@ -4,10 +4,14 @@
 package ${package}.configuration;
 
 import javax.inject.Inject;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
 
 import org.flywaydb.core.Flyway;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.slf4j.bridge.SLF4JBridgeHandler;
 
 import com.google.inject.persist.PersistService;
 import com.premiumminds.persistence.PersistenceTransaction;
@@ -23,11 +27,18 @@ public class Application extends WebApplication {
 	
 	@Override
 	protected void init() {
+
+		SLF4JBridgeHandler.removeHandlersForRootLogger();
+		SLF4JBridgeHandler.install();
+
 		try {
-            Flyway flyway = new Flyway();
-            flyway.setDataSource("jdbc:postgresql://localhost/udifar-mvp", "postgres", "postgres");
-            flyway.setLocations("filesystem:src/main/sql/migrations");
-            flyway.migrate();
+			Context initContext = new InitialContext();
+			Context webContext = (Context)initContext.lookup("java:/comp/env");
+
+			DataSource ds = (DataSource) webContext.lookup("jdbc/appDatasource");
+			
+			Flyway flyway = Flyway.configure().locations("migrations").dataSource(ds).load();
+			flyway.migrate();
 
 			persistService.start();
 
@@ -36,7 +47,7 @@ public class Application extends WebApplication {
 			super.init();
 		} catch(Throwable t){
 			log.error("error starting application", t);
-			throw t;
+			throw new RuntimeException("could not start application", t);
 		}
 	}
 

@@ -7,10 +7,10 @@
 		<Arg>jdbc/appDatasource</Arg>
 		<Arg>
 			<New class="org.postgresql.ds.PGSimpleDataSource">
-				<Set name="User">postgres</Set>
-				<Set name="Password">postgres</Set>
+				<Set name="User">${databaseUsername}</Set>
+				<Set name="Password">${databasePassword}</Set>
 				<Set name="DatabaseName">${databaseName}</Set>
-				<Set name="ServerName">localhost</Set>
+				<Set name="ServerName">${databaseHost}</Set>
 				<Set name="PortNumber">5432</Set>
 			</New>
 		</Arg>

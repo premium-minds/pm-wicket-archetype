@@ -63,9 +63,16 @@
       </includes>
     </fileSet>
     <fileSet encoding="UTF-8">
+      <directory>src/main/resources/migrations</directory>
+      <includes>
+        <include>**/*.sql</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
       <directory>src/main/sql</directory>
       <includes>
         <include>**/*.sql</include>
+        <include>**/*.txt</include>
       </includes>
     </fileSet>
     <fileSet filtered="true" encoding="UTF-8">
