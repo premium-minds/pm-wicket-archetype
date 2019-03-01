@@ -11,6 +11,7 @@ import javax.sql.DataSource;
 import org.flywaydb.core.Flyway;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.slf4j.bridge.SLF4JBridgeHandler;
 
 import com.google.inject.persist.PersistService;
 import com.premiumminds.persistence.PersistenceTransaction;
@@ -26,6 +27,10 @@ public class Application extends WebApplication {
 	
 	@Override
 	protected void init() {
+
+		SLF4JBridgeHandler.removeHandlersForRootLogger();
+		SLF4JBridgeHandler.install();
+
 		try {
 			Context initContext = new InitialContext();
 			Context webContext = (Context)initContext.lookup("java:/comp/env");
