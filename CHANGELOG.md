@@ -14,6 +14,18 @@
  - [Bump nexus-staging-maven-plugin from 1.6.2 to 1.6.8](https://github.com/premium-minds/pm-wicket-archetype/pull/14)
  - [Bump archetype-packaging from 3.1.2 to 3.2.0](https://github.com/premium-minds/pm-wicket-archetype/pull/16)
  - [Bump maven-archetype-plugin from 3.1.2 to 3.2.0](https://github.com/premium-minds/pm-wicket-archetype/pull/15)
+ - [Bump wicket to 8.10.0 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/28)
+ - [Bump slf4j to 1.7.30 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/27)
+ - [Bump postgresql to 42.2.18 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/26)
+ - [Bump pm-wicket-utils to 4.4 in resource pom.xml ](https://github.com/premium-minds/pm-wicket-archetype/pull/25)
+ - [Bump maven-compiler-plugin to 3.8.1 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/24)
+ - [Bump maven-ant-plugin to 3.0.0 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/23)
+ - [Bump junit to 4.13.1 in resource pom.xml ](https://github.com/premium-minds/pm-wicket-archetype/pull/22)
+ - [Bump jetty-maven-plugin to 9.4.34.v20201102 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/21)
+ - [Bump Hibernate to 5.4.23.Final in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/20)
+ - [Bump H2 to 1.4.200 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/19)
+ - [Bump flyway to 7.1.1 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/18)
+ - [Bump easymock to 4.2 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/17)
  
 ## [v3.1] - 2018-10-03
 
