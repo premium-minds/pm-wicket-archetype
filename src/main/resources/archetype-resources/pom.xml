@@ -131,13 +131,13 @@
 		<!-- MAIL -->
 		<dependency>
 			<groupId>com.sun.mail</groupId>
-			<artifactId>javax.mail</artifactId>
-			<version>1.6.2</version>
+			<artifactId>jakarta.mail</artifactId>
+			<version>1.6.5</version>
 		</dependency>
 		<dependency>
 			<groupId>com.sun.mail</groupId>
 			<artifactId>smtp</artifactId>
-			<version>1.6.2</version>
+			<version>1.6.5</version>
 		</dependency>
 
 		<!-- TESTS -->
