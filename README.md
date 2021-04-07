@@ -53,7 +53,7 @@ The default user is `template@premium-minds.com` with password `test`
 
 ## Continuous Integration
 
-[![Build Status](https://travis-ci.com/premium-minds/pm-wicket-archetype.png?branch=master)](https://travis-ci.com/premium-minds/pm-wicket-archetype)
+[![Build Status](https://travis-ci.com/premium-minds/pm-wicket-archetype.png?branch=master)](https://travis-ci.com/github/premium-minds/pm-wicket-archetype)
 
 CI is hosted by [travis-ci.com](https://travis-ci.com/)
 
