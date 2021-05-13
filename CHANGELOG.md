@@ -28,6 +28,7 @@
  - [Bump easymock to 4.2 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/17)
  - [Move from old javax.mail to new jakarta.mail](https://github.com/premium-minds/pm-wicket-archetype/pull/31)
  - [Move from old javax.servlet-api to new jakarta.servlet-api](https://github.com/premium-minds/pm-wicket-archetype/pull/32)
+ - [Bump maven-gpg-plugin from 1.6 to 3.0.1](https://github.com/premium-minds/pm-wicket-archetype/pull/35)
  
 ## [v3.1] - 2018-10-03
 
