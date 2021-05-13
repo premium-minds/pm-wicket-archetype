@@ -29,6 +29,8 @@
  - [Move from old javax.mail to new jakarta.mail](https://github.com/premium-minds/pm-wicket-archetype/pull/31)
  - [Move from old javax.servlet-api to new jakarta.servlet-api](https://github.com/premium-minds/pm-wicket-archetype/pull/32)
  - [Bump maven-gpg-plugin from 1.6 to 3.0.1](https://github.com/premium-minds/pm-wicket-archetype/pull/35)
+ - [Bump Guice to 4.2.3 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/29)
+ - [Bump java source and target to 11](https://github.com/premium-minds/pm-wicket-archetype/pull/30)
  
 ## [v3.1] - 2018-10-03
 
