@@ -31,7 +31,8 @@
  - [Bump maven-gpg-plugin from 1.6 to 3.0.1](https://github.com/premium-minds/pm-wicket-archetype/pull/35)
  - [Bump Guice to 4.2.3 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/29)
  - [Bump java source and target to 11](https://github.com/premium-minds/pm-wicket-archetype/pull/30)
- 
+ - [Bump maven-scm-provider-gitexe from 1.11.2 to 1.11.3](https://github.com/premium-minds/pm-wicket-archetype/pull/36)
+
 ## [v3.1] - 2018-10-03
 
 ### Changed
