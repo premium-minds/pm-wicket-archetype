@@ -31,6 +31,8 @@ public class ListUsersPage extends TemplatePage {
 	private CrudifierTable<UserApplication> table;
 	private ConfirmModal modal;
 
+	private boolean isModalShowing = false;
+
 	@Override
 	protected void onInitialize() {
 		super.onInitialize();
@@ -53,6 +55,10 @@ public class ListUsersPage extends TemplatePage {
 			}
 			@Override
 			protected void onSelected(AjaxRequestTarget target, IModel<UserApplication> model){
+				if (isModalShowing) {
+					isModalShowing = false;
+					return;
+				}
 				throw new RestartResponseException(new CreateUserPage(model.getObject()));
 			}
 		}); 
@@ -66,6 +72,7 @@ public class ListUsersPage extends TemplatePage {
 			public void onClick(IModel<UserApplication> model,AjaxRequestTarget target) {
 				selectedUser=model.getObject();
 				modal.show();
+				isModalShowing = true;
 				target.add(modal);
 			}
 		});
