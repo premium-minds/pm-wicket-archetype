@@ -34,6 +34,7 @@
  - [Bump maven-scm-provider-gitexe from 1.11.2 to 1.11.3](https://github.com/premium-minds/pm-wicket-archetype/pull/36)
  - [Bump maven-scm-provider-gitexe from 1.11.3 to 1.12.0](https://github.com/premium-minds/pm-wicket-archetype/pull/37)
  - [Bump archetype-packaging from 3.2.0 to 3.2.1](https://github.com/premium-minds/pm-wicket-archetype/pull/39)
+ - [Bump maven-archetype-plugin from 3.2.0 to 3.2.1](https://github.com/premium-minds/pm-wicket-archetype/pull/38)
 
 ## [v3.1] - 2018-10-03
 
