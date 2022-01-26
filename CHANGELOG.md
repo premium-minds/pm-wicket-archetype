@@ -23,6 +23,7 @@
  - [Bump junit to 4.13.1 in resource pom.xml ](https://github.com/premium-minds/pm-wicket-archetype/pull/22)
  - [Bump jetty-maven-plugin to 9.4.34.v20201102 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/21)
  - [Bump Hibernate to 5.4.23.Final in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/20)
+ - [Bump Hibernate to 5.6.5.Final in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/44)
  - [Bump H2 to 1.4.200 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/19)
  - [Bump flyway to 7.1.1 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/18)
  - [Bump easymock to 4.2 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/17)
