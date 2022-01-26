@@ -31,6 +31,7 @@
  - [Move from old javax.servlet-api to new jakarta.servlet-api](https://github.com/premium-minds/pm-wicket-archetype/pull/32)
  - [Bump maven-gpg-plugin from 1.6 to 3.0.1](https://github.com/premium-minds/pm-wicket-archetype/pull/35)
  - [Bump Guice to 4.2.3 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/29)
+ - [Bump Guice to 5.1.0 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/45)
  - [Bump java source and target to 11](https://github.com/premium-minds/pm-wicket-archetype/pull/30)
  - [Bump maven-scm-provider-gitexe from 1.11.2 to 1.11.3](https://github.com/premium-minds/pm-wicket-archetype/pull/36)
  - [Bump maven-scm-provider-gitexe from 1.11.3 to 1.12.0](https://github.com/premium-minds/pm-wicket-archetype/pull/37)
