@@ -27,6 +27,7 @@
  - [Bump Hibernate to 5.4.23.Final in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/20)
  - [Bump Hibernate to 5.6.5.Final in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/44)
  - [Bump H2 to 1.4.200 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/19)
+ - [Bump h2 from 1.4.200 to 2.1.210 in /src/main/resources/archetype-resources](https://github.com/premium-minds/pm-wicket-archetype/pull/43)
  - [Bump flyway to 7.1.1 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/18)
  - [Bump easymock to 4.2 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/17)
  - [Move from old javax.mail to new jakarta.mail](https://github.com/premium-minds/pm-wicket-archetype/pull/31)
