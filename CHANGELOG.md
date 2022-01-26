@@ -41,6 +41,7 @@
  - [Bump maven-archetype-plugin from 3.2.0 to 3.2.1](https://github.com/premium-minds/pm-wicket-archetype/pull/38)
  - [Bump pm-persistence-utils to 2.2 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/47)
  - [Bump wicket-crudifier to 4.2 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/48)
+ - [Bump logback to 1.2.10 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/49)
 
 ## [v3.1] - 2018-10-03
 
