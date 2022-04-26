@@ -48,6 +48,7 @@
  - [Bump logback to 1.2.10 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/49)
  - [Bump nexus-staging-maven-plugin from 1.6.8 to 1.6.11](https://github.com/premium-minds/pm-wicket-archetype/pull/54)
  - [Bump nexus-staging-maven-plugin from 1.6.11 to 1.6.12](https://github.com/premium-minds/pm-wicket-archetype/pull/55)
+ - [Bump nexus-staging-maven-plugin from 1.6.12 to 1.6.13](https://github.com/premium-minds/pm-wicket-archetype/pull/56)
 
 ## [v3.1] - 2018-10-03
 
