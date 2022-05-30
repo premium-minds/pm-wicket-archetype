@@ -41,6 +41,7 @@
  - [Bump maven-scm-provider-gitexe from 1.11.2 to 1.11.3](https://github.com/premium-minds/pm-wicket-archetype/pull/36)
  - [Bump maven-scm-provider-gitexe from 1.11.3 to 1.12.0](https://github.com/premium-minds/pm-wicket-archetype/pull/37)
  - [Bump maven-scm-provider-gitexe from 1.12.0 to 1.12.2](https://github.com/premium-minds/pm-wicket-archetype/pull/41)
+ - [Bump maven-scm-provider-gitexe from 1.12.2 to 1.13.0](https://github.com/premium-minds/pm-wicket-archetype/pull/57)
  - [Bump archetype-packaging from 3.2.0 to 3.2.1](https://github.com/premium-minds/pm-wicket-archetype/pull/39)
  - [Bump maven-archetype-plugin from 3.2.0 to 3.2.1](https://github.com/premium-minds/pm-wicket-archetype/pull/38)
  - [Bump pm-persistence-utils to 2.2 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/47)
