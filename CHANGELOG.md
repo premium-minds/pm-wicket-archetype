@@ -23,6 +23,7 @@
  - [Bump postgresql from 42.2.25 to 42.3.3 in /src/main/resources/archetype-resources](https://github.com/premium-minds/pm-wicket-archetype/pull/53)
  - [Bump postgresql from 42.3.3 to 42.4.1 in /src/main/resources/archetype-resources](https://github.com/premium-minds/pm-wicket-archetype/pull/58)
  - [Bump postgresql to 42.5.0](https://github.com/premium-minds/pm-wicket-archetype/commit/7b0180ca8647b5dce0e96afc6752a9f58e9d1d1b)
+ - [Bump postgresql from 42.5.0 to 42.5.1 in /src/main/resources/archetype-resources](https://github.com/premium-minds/pm-wicket-archetype/pull/59)
  - [Bump pm-wicket-utils to 4.4 in resource pom.xml ](https://github.com/premium-minds/pm-wicket-archetype/pull/25)
  - [Bump maven-compiler-plugin to 3.8.1 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/24)
  - [Bump maven-ant-plugin to 3.0.0 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/23)
