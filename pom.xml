@@ -4,7 +4,7 @@
 
 	<groupId>com.premiumminds</groupId>
 	<artifactId>pm-wicket-archetype</artifactId>
-	<version>3.2-SNAPSHOT</version>
+	<version>4.0-SNAPSHOT</version>
 	<packaging>maven-archetype</packaging>
 
 	<name>pm-wicket-archetype</name>
