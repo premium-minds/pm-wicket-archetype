@@ -8,6 +8,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
+import org.apache.wicket.resource.JQueryResourceReference;
 import org.flywaydb.core.Flyway;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,6 +44,9 @@ public class Application extends WebApplication {
 			persistService.start();
 
 			getRequestCycleListeners().add(new TransactionalRequestCycleListener(persistenceTransaction));
+
+			getCspSettings().blocking().disabled();
+			getJavaScriptLibrarySettings().setJQueryReference(JQueryResourceReference.getV2());
 
 			super.init();
 		} catch(Throwable t){
