@@ -5,6 +5,7 @@
 
 ### Changed
 
+ - [Upgrade to Wicket 9, Java 11 and Junit 5](https://github.com/premium-minds/pm-wicket-archetype/pull/65)
  - [fix sql migrations + jetty + logs](https://github.com/premium-minds/pm-wicket-archetype/pull/8)
  - [Bump maven-gpg-plugin from 1.5 to 1.6](https://github.com/premium-minds/pm-wicket-archetype/pull/9)
  - [Bump maven-archetype-plugin from 2.2 to 3.1.2](https://github.com/premium-minds/pm-wicket-archetype/pull/10)
