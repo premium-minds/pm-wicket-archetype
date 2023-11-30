@@ -55,9 +55,11 @@
  - [Bump pm-persistence-utils to 2.2 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/47)
  - [Bump wicket-crudifier to 4.2 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/48)
  - [Bump logback to 1.2.10 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/49)
+ - [Bump ch.qos.logback:logback-classic from 1.3.7 to 1.3.12 in /src/main/resources/archetype-resources](https://github.com/premium-minds/pm-wicket-archetype/pull/69)
  - [Bump nexus-staging-maven-plugin from 1.6.8 to 1.6.11](https://github.com/premium-minds/pm-wicket-archetype/pull/54)
  - [Bump nexus-staging-maven-plugin from 1.6.11 to 1.6.12](https://github.com/premium-minds/pm-wicket-archetype/pull/55)
  - [Bump nexus-staging-maven-plugin from 1.6.12 to 1.6.13](https://github.com/premium-minds/pm-wicket-archetype/pull/56)
+
 
 ## [v3.1] - 2018-10-03
 
