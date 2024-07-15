@@ -14,7 +14,7 @@
 	<url>http://www.premium-minds.com</url>
 
 	<properties>
-		<wicket.version>9.14.0</wicket.version>
+		<wicket.version>9.18.0</wicket.version>
 		<guice.version>5.1.0</guice.version>
 		<hibernate.version>5.6.15.Final</hibernate.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
