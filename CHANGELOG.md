@@ -68,6 +68,8 @@
  - [Bump wicket-crudifier to 4.2 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/48)
  - [Bump logback to 1.2.10 in resource pom.xml](https://github.com/premium-minds/pm-wicket-archetype/pull/49)
  - [Bump ch.qos.logback:logback-classic from 1.3.7 to 1.3.12 in /src/main/resources/archetype-resources](https://github.com/premium-minds/pm-wicket-archetype/pull/69)
+ - [Bump org.apache.maven.plugins:maven-archetype-plugin from 3.3.1 to 3.4.0](https://github.com/premium-minds/pm-wicket-archetype/pull/90)
+ - [Bump org.apache.maven.archetype:archetype-packaging from 3.3.1 to 3.4.0](https://github.com/premium-minds/pm-wicket-archetype/pull/89)
 
 ## [v3.1] - 2018-10-03
 
