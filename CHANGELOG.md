@@ -25,6 +25,7 @@
  - [Bump maven-release-plugin from 3.0.0 to 3.0.1](https://github.com/premium-minds/pm-wicket-archetype/pull/67)
  - [Bump org.apache.maven.plugins:maven-release-plugin from 3.0.1 to 3.1.0](https://github.com/premium-minds/pm-wicket-archetype/pull/78)
  - [Bump org.apache.maven.plugins:maven-release-plugin from 3.1.0 to 3.2.0](https://github.com/premium-minds/pm-wicket-archetype/pull/96)
+ - [Bump org.apache.maven.plugins:maven-release-plugin from 3.2.0 to 3.3.0](https://github.com/premium-minds/pm-wicket-archetype/pull/97)
  - [Bump archetype-packaging from 2.2 to 3.1.2](https://github.com/premium-minds/pm-wicket-archetype/pull/13)
  - [Bump archetype-packaging from 3.1.2 to 3.2.0](https://github.com/premium-minds/pm-wicket-archetype/pull/16)
  - [Bump archetype-packaging from 3.2.0 to 3.2.1](https://github.com/premium-minds/pm-wicket-archetype/pull/39)
